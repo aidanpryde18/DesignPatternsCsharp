@@ -16,3 +16,6 @@ C:\GitHub2\DesignPatternsCsharp\02-Interfaces\InterfacesAndAbstractClasses\obj\D
 C:\GitHub2\DesignPatternsCsharp\02-Interfaces\InterfacesAndAbstractClasses\bin\Debug\InheritanceInterfacesAndDelegates.exe
 C:\GitHub2\DesignPatternsCsharp\02-Interfaces\InterfacesAndAbstractClasses\bin\Debug\InheritanceInterfacesAndDelegates.pdb
 C:\GitHub2\DesignPatternsCsharp\02-Interfaces\InterfacesAndAbstractClasses\obj\Debug\InterfacesAndAbstractClasses.csprojResolveAssemblyReference.cache
+C:\Users\AQS242RW\Source\Repos\DesignPatternsCsharp\02-Interfaces\InterfacesAndAbstractClasses\bin\Debug\InheritanceInterfacesAndDelegates.exe.config
+C:\Users\AQS242RW\Source\Repos\DesignPatternsCsharp\02-Interfaces\InterfacesAndAbstractClasses\obj\Debug\InheritanceInterfacesAndDelegates.exe
+C:\Users\AQS242RW\Source\Repos\DesignPatternsCsharp\02-Interfaces\InterfacesAndAbstractClasses\obj\Debug\InheritanceInterfacesAndDelegates.pdb

@@ -2,51 +2,15 @@
 
 namespace InterfacesAndAbstractClasses
 {
-    public class LunchDeal 
+    public class LunchDeal : Deal
     {
-        //Shared Infromation between meals
-        //These fields all seem very similar to Dinner deal. 
-        //Does this seem redundant?
-        public string Meal { get; set; }
-        public string Entree { get; set; }
-        public string Meat { get; set; }
-        public string Bread { get; set; }
-        public bool Cheese { get; set; }
-        public string Drink { get; set; }
-        public string Side { get; set; }
-
-        private string GetDrink()
-        {
-            Console.Write("What would you like to drink?:\n");
-            var drink = Console.ReadLine();
-
-            if (drink != null)
-                return drink.ToLower().Trim();
-
-            Console.Write("Please enter a valid drink?:\n");
-            return GetDrink();
-        }
-
-        private string GetSide()
-        {
-            Console.Write("What side would you like?:\n");
-            var side = Console.ReadLine();
-
-            if (side != null)
-                return side.ToLower().Trim();
-
-            Console.Write("Please enter a valid side?:\n");
-            return GetSide();
-        }
-
-
-
+        
         //These all look different, but share very 
         //similar signatures and similar functionality
 
         //This method finishes the lunch order by 
         //filling in the final entree specific details 
-        public LunchDeal GetOrder()
+        public override Deal GetOrder()
         {
             var meal = GetMealDeal();
 
@@ -78,7 +42,7 @@ namespace InterfacesAndAbstractClasses
         }
 
         //This method prints out a completed order
-        public void PrintOrder(LunchDeal meal)
+        public override void PrintOrder(Deal meal)
         {
             var cheese = meal.Cheese ? "with cheese" : "without cheese";
             var carb = meal.Entree == "burrito" ? "tortilla" : "bread";
@@ -91,7 +55,7 @@ namespace InterfacesAndAbstractClasses
 
         //This method gets the basic Meal so the appropriate 
         //entree specific questions can then be asked
-        private LunchDeal GetMealDeal()
+        protected override Deal GetMealDeal()
         {
             return new LunchDeal
             {
@@ -103,7 +67,7 @@ namespace InterfacesAndAbstractClasses
 
         //This method this method gets the lunch spefic entree choice 
         //if they do not spell it right it asks again
-        private string GetEntree()
+        public override string GetEntree()
         {
             Console.Write("Would you like a sandwich or a burrito?:\n");
             var entree = Console.ReadLine();
